@@ -14,6 +14,9 @@ import FroalaEditor from './components/FroalaEditor';
 // import DanteEditor from 'Dante2';
 import ReactPageEditor from './components/Rpage';
 import Ckeditor from './components/Ckeditor5';
+import DraftTaileditor from './components/Drafttail';
+import RichTextExample from './components/SlateEditor';
+// import {DraftailEditor} from 'draftail';
 // import AlloyEditor from 'alloyeditor';
 import './App.css';
 function App() {
@@ -69,9 +72,18 @@ function App() {
                      <Ckeditor />
                  </Route>
 
+                 <Route path="/drafttail-editor" >
+                          <DraftTaileditor />
+                 </Route>
+
+                 
+                 <Route path="/slateEditor-editor" >
+                           <RichTextExample />
+                 </Route>
+
             </Switch>
       {/* <AlloyEditor /> */}
-
+      
         </Router>
         
     )
@@ -93,6 +105,8 @@ const Home = ()=>{
                     <li className="list-content"><Link to="/froala-editor">Froala Editor</Link> </li>
                     <li className="list-content"><Link to="/reactpage-editor">React Page Editor</Link> </li>
                     <li className="list-content"><Link to="/ckeditor5-editor">CKEDITOR5 Editor</Link> </li>
+                    <li className="list-content"><Link to="/drafttail-editor">DraftTail Editor</Link> </li>
+                    <li className="list-content"><Link to="/slateEditor-editor">SlateEditor Editor</Link> </li>
                 </ul>
             </nav>
     )}
